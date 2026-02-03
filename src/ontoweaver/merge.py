@@ -238,7 +238,7 @@ class string:
 
                 merge = nx.lowest_common_ancestor(graph_hierarchy, self.merged, rhs)
                 if merge is None:
-                    raise ValueError(f"Value `{rhs}` has no common subtype with previously seen one: `{self.merged}`.`")
+                    raise ValueError(f"{key}: Value `{rhs}` has no common subtype with previously seen one: `{self.merged}`.`")
                 self.set(merge)
                 self.merged = merge
                 logger.debug(f"`{merge}`")
